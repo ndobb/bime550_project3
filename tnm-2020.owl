@@ -37,13 +37,13 @@ tnm-lung-olivier:hasLocation rdf:type owl:ObjectProperty ;
 ###  http://smi.stanford.edu/people/dameron/ontology/tnm-lung-olivier.owl#hasMetastasis
 tnm-lung-olivier:hasMetastasis rdf:type owl:ObjectProperty ;
                                owl:inverseOf tnm-lung-olivier:isMetastasisOf ;
-                               rdfs:domain tnm-lung-olivier:PrimaryTumour ;
+                               rdfs:domain tnm-lung-olivier:PrimaryTumor ;
                                rdfs:range tnm-lung-olivier:Metastasis .
 
 
-###  http://smi.stanford.edu/people/dameron/ontology/tnm-lung-olivier.owl#hasPrimaryTumour
-tnm-lung-olivier:hasPrimaryTumour rdf:type owl:ObjectProperty ;
-                                  rdfs:range tnm-lung-olivier:PrimaryTumour .
+###  http://smi.stanford.edu/people/dameron/ontology/tnm-lung-olivier.owl#hasPrimaryTumor
+tnm-lung-olivier:hasPrimaryTumor rdf:type owl:ObjectProperty ;
+                                  rdfs:range tnm-lung-olivier:PrimaryTumor .
 
 
 ###  http://smi.stanford.edu/people/dameron/ontology/tnm-lung-olivier.owl#hasSide
@@ -63,7 +63,7 @@ tnm-lung-olivier:isLocatedIn rdf:type owl:ObjectProperty .
 ###  http://smi.stanford.edu/people/dameron/ontology/tnm-lung-olivier.owl#isMetastasisOf
 tnm-lung-olivier:isMetastasisOf rdf:type owl:ObjectProperty ,
                                          owl:FunctionalProperty ;
-                                rdfs:range tnm-lung-olivier:PrimaryTumour .
+                                rdfs:range tnm-lung-olivier:PrimaryTumor .
 
 
 #################################################################
@@ -73,7 +73,7 @@ tnm-lung-olivier:isMetastasisOf rdf:type owl:ObjectProperty ,
 ###  http://smi.stanford.edu/people/dameron/ontology/tnm-lung-olivier.owl#AnatomicalStructure
 tnm-lung-olivier:AnatomicalStructure rdf:type owl:Class ;
                                      owl:disjointWith tnm-lung-olivier:Side ,
-                                                      tnm-lung-olivier:Tumour .
+                                                      tnm-lung-olivier:Tumor .
 
 
 ###  http://smi.stanford.edu/people/dameron/ontology/tnm-lung-olivier.owl#AxillaryLymphNode
@@ -462,7 +462,7 @@ tnm-lung-olivier:LungCancerDiagnosis rdf:type owl:Class ;
                                      owl:equivalentClass tnm-lung-olivier:Patient ,
                                                          [ owl:intersectionOf ( tnm-lung-olivier:CancerDiagnosis
                                                                                 [ rdf:type owl:Restriction ;
-                                                                                  owl:onProperty tnm-lung-olivier:hasPrimaryTumour ;
+                                                                                  owl:onProperty tnm-lung-olivier:hasPrimaryTumor ;
                                                                                   owl:someValuesFrom [ rdf:type owl:Restriction ;
                                                                                                        owl:onProperty tnm-lung-olivier:hasLocation ;
                                                                                                        owl:someValuesFrom tnm-lung-olivier:Lung
@@ -531,7 +531,7 @@ tnm-lung-olivier:Metastasis rdf:type owl:Class ;
                                               owl:onProperty tnm-lung-olivier:hasLocation ;
                                               owl:cardinality "1"^^xsd:nonNegativeInteger
                                             ] ;
-                            owl:disjointWith tnm-lung-olivier:PrimaryTumour .
+                            owl:disjointWith tnm-lung-olivier:PrimaryTumor .
 
 
 ###  http://smi.stanford.edu/people/dameron/ontology/tnm-lung-olivier.owl#MiddleLobeOfLung
@@ -634,7 +634,7 @@ tnm-lung-olivier:Patient1 rdf:type owl:Class ;
                                             owl:someValuesFrom tnm-lung-olivier:UpperLobeOfLeftLung
                                           ] ,
                                           [ rdf:type owl:Restriction ;
-                                            owl:onProperty tnm-lung-olivier:hasPrimaryTumour ;
+                                            owl:onProperty tnm-lung-olivier:hasPrimaryTumor ;
                                             owl:someValuesFrom tnm-lung-olivier:TumorBetween2cm3cm
                                           ] ,
                                           [ rdf:type owl:Restriction ;
@@ -651,7 +651,7 @@ tnm-lung-olivier:Patient1b rdf:type owl:Class ;
                                              owl:someValuesFrom tnm-lung-olivier:UpperLobeOfLeftLung
                                            ] ,
                                            [ rdf:type owl:Restriction ;
-                                             owl:onProperty tnm-lung-olivier:hasPrimaryTumour ;
+                                             owl:onProperty tnm-lung-olivier:hasPrimaryTumor ;
                                              owl:someValuesFrom tnm-lung-olivier:TumorBetween3cm5cm
                                            ] ,
                                            [ rdf:type owl:Restriction ;
@@ -675,11 +675,11 @@ tnm-lung-olivier:Patient2 rdf:type owl:Class ;
                                                                ]
                                           ] ,
                                           [ rdf:type owl:Restriction ;
-                                            owl:onProperty tnm-lung-olivier:hasPrimaryTumour ;
+                                            owl:onProperty tnm-lung-olivier:hasPrimaryTumor ;
                                             owl:someValuesFrom tnm-lung-olivier:TumorBetween2cm3cm
                                           ] ,
                                           [ rdf:type owl:Restriction ;
-                                            owl:onProperty tnm-lung-olivier:hasPrimaryTumour ;
+                                            owl:onProperty tnm-lung-olivier:hasPrimaryTumor ;
                                             owl:someValuesFrom [ rdf:type owl:Restriction ;
                                                                  owl:onProperty tnm-lung-olivier:hasLocation ;
                                                                  owl:someValuesFrom tnm-lung-olivier:RightLung
@@ -695,7 +695,7 @@ tnm-lung-olivier:Patient2 rdf:type owl:Class ;
 tnm-lung-olivier:Patient3 rdf:type owl:Class ;
                           rdfs:subClassOf tnm-lung-olivier:Patient ,
                                           [ rdf:type owl:Restriction ;
-                                            owl:onProperty tnm-lung-olivier:hasPrimaryTumour ;
+                                            owl:onProperty tnm-lung-olivier:hasPrimaryTumor ;
                                             owl:someValuesFrom [ rdf:type owl:Restriction ;
                                                                  owl:onProperty tnm-lung-olivier:hasLocation ;
                                                                  owl:someValuesFrom tnm-lung-olivier:ParietalPericardium
@@ -711,7 +711,7 @@ tnm-lung-olivier:Patient3 rdf:type owl:Class ;
 tnm-lung-olivier:Patient4 rdf:type owl:Class ;
                           rdfs:subClassOf tnm-lung-olivier:Patient ,
                                           [ rdf:type owl:Restriction ;
-                                            owl:onProperty tnm-lung-olivier:hasPrimaryTumour ;
+                                            owl:onProperty tnm-lung-olivier:hasPrimaryTumor ;
                                             owl:someValuesFrom [ rdf:type owl:Restriction ;
                                                                  owl:onProperty tnm-lung-olivier:hasLocation ;
                                                                  owl:someValuesFrom tnm-lung-olivier:Esophagus
@@ -727,11 +727,11 @@ tnm-lung-olivier:Patient4 rdf:type owl:Class ;
 tnm-lung-olivier:Patient5 rdf:type owl:Class ;
                           rdfs:subClassOf tnm-lung-olivier:Patient ,
                                           [ rdf:type owl:Restriction ;
-                                            owl:onProperty tnm-lung-olivier:hasPrimaryTumour ;
+                                            owl:onProperty tnm-lung-olivier:hasPrimaryTumor ;
                                             owl:someValuesFrom tnm-lung-olivier:TumorBetween5cm7cm
                                           ] ,
                                           [ rdf:type owl:Restriction ;
-                                            owl:onProperty tnm-lung-olivier:hasPrimaryTumour ;
+                                            owl:onProperty tnm-lung-olivier:hasPrimaryTumor ;
                                             owl:someValuesFrom [ rdf:type owl:Restriction ;
                                                                  owl:onProperty tnm-lung-olivier:hasLocation ;
                                                                  owl:someValuesFrom tnm-lung-olivier:Trachea
@@ -758,11 +758,11 @@ tnm-lung-olivier:Patient6 rdf:type owl:Class ;
                                                                ]
                                           ] ,
                                           [ rdf:type owl:Restriction ;
-                                            owl:onProperty tnm-lung-olivier:hasPrimaryTumour ;
+                                            owl:onProperty tnm-lung-olivier:hasPrimaryTumor ;
                                             owl:someValuesFrom tnm-lung-olivier:TumorBetween5cm7cm
                                           ] ,
                                           [ rdf:type owl:Restriction ;
-                                            owl:onProperty tnm-lung-olivier:hasPrimaryTumour ;
+                                            owl:onProperty tnm-lung-olivier:hasPrimaryTumor ;
                                             owl:someValuesFrom [ rdf:type owl:Restriction ;
                                                                  owl:onProperty tnm-lung-olivier:hasLocation ;
                                                                  owl:someValuesFrom tnm-lung-olivier:UpperLobeOfLeftLung
@@ -789,7 +789,7 @@ tnm-lung-olivier:Patient7 rdf:type owl:Class ;
                                                                ]
                                           ] ,
                                           [ rdf:type owl:Restriction ;
-                                            owl:onProperty tnm-lung-olivier:hasPrimaryTumour ;
+                                            owl:onProperty tnm-lung-olivier:hasPrimaryTumor ;
                                             owl:someValuesFrom [ rdf:type owl:Restriction ;
                                                                  owl:onProperty tnm-lung-olivier:hasLocation ;
                                                                  owl:someValuesFrom tnm-lung-olivier:UpperLobeOfLeftLung
@@ -824,7 +824,7 @@ tnm-lung-olivier:Patient9 rdf:type owl:Class ;
                                                                ]
                                           ] ,
                                           [ rdf:type owl:Restriction ;
-                                            owl:onProperty tnm-lung-olivier:hasPrimaryTumour ;
+                                            owl:onProperty tnm-lung-olivier:hasPrimaryTumor ;
                                             owl:someValuesFrom tnm-lung-olivier:TumorBetween3cm5cm
                                           ] .
 
@@ -842,9 +842,9 @@ tnm-lung-olivier:PeribronchialLymphNode rdf:type owl:Class ;
                                                          tnm-lung-olivier:SupraclavicularLymphNode .
 
 
-###  http://smi.stanford.edu/people/dameron/ontology/tnm-lung-olivier.owl#PrimaryTumour
-tnm-lung-olivier:PrimaryTumour rdf:type owl:Class ;
-                               rdfs:subClassOf tnm-lung-olivier:Tumour ,
+###  http://smi.stanford.edu/people/dameron/ontology/tnm-lung-olivier.owl#PrimaryTumor
+tnm-lung-olivier:PrimaryTumor rdf:type owl:Class ;
+                               rdfs:subClassOf tnm-lung-olivier:Tumor ,
                                                [ rdf:type owl:Restriction ;
                                                  owl:onProperty tnm-lung-olivier:hasLocation ;
                                                  owl:cardinality "1"^^xsd:nonNegativeInteger
@@ -907,7 +907,7 @@ tnm-lung-olivier:RightLung rdf:type owl:Class ;
 
 ###  http://smi.stanford.edu/people/dameron/ontology/tnm-lung-olivier.owl#RightLungPrimaryTumor
 tnm-lung-olivier:RightLungPrimaryTumor rdf:type owl:Class ;
-                                       rdfs:subClassOf tnm-lung-olivier:PrimaryTumour ,
+                                       rdfs:subClassOf tnm-lung-olivier:PrimaryTumor ,
                                                        [ rdf:type owl:Restriction ;
                                                          owl:onProperty tnm-lung-olivier:hasLocation ;
                                                          owl:someValuesFrom tnm-lung-olivier:RightLung
@@ -939,7 +939,7 @@ tnm-lung-olivier:ScaleneLimphNode rdf:type owl:Class ;
 
 ###  http://smi.stanford.edu/people/dameron/ontology/tnm-lung-olivier.owl#Side
 tnm-lung-olivier:Side rdf:type owl:Class ;
-                      owl:disjointWith tnm-lung-olivier:Tumour .
+                      owl:disjointWith tnm-lung-olivier:Tumor .
 
 
 ###  http://smi.stanford.edu/people/dameron/ontology/tnm-lung-olivier.owl#Stage1A
@@ -1090,7 +1090,7 @@ tnm-lung-olivier:SupraclavicularLymphNode rdf:type owl:Class ;
 tnm-lung-olivier:T1 rdf:type owl:Class ;
                     owl:equivalentClass [ owl:intersectionOf ( tnm-lung-olivier:LungCancerDiagnosis
                                                                [ rdf:type owl:Restriction ;
-                                                                 owl:onProperty tnm-lung-olivier:hasPrimaryTumour ;
+                                                                 owl:onProperty tnm-lung-olivier:hasPrimaryTumor ;
                                                                  owl:someValuesFrom [ rdf:type owl:Class ;
                                                                                       owl:unionOf ( tnm-lung-olivier:TumorBetween2cm3cm
                                                                                                     tnm-lung-olivier:TumorSmaller2cm
@@ -1107,7 +1107,7 @@ tnm-lung-olivier:T1 rdf:type owl:Class ;
 tnm-lung-olivier:T1a rdf:type owl:Class ;
                      owl:equivalentClass [ owl:intersectionOf ( tnm-lung-olivier:LungCancerDiagnosis
                                                                 [ rdf:type owl:Restriction ;
-                                                                  owl:onProperty tnm-lung-olivier:hasPrimaryTumour ;
+                                                                  owl:onProperty tnm-lung-olivier:hasPrimaryTumor ;
                                                                   owl:someValuesFrom tnm-lung-olivier:TumorSmaller2cm
                                                                 ]
                                                               ) ;
@@ -1120,7 +1120,7 @@ tnm-lung-olivier:T1a rdf:type owl:Class ;
 tnm-lung-olivier:T1b rdf:type owl:Class ;
                      owl:equivalentClass [ owl:intersectionOf ( tnm-lung-olivier:LungCancerDiagnosis
                                                                 [ rdf:type owl:Restriction ;
-                                                                  owl:onProperty tnm-lung-olivier:hasPrimaryTumour ;
+                                                                  owl:onProperty tnm-lung-olivier:hasPrimaryTumor ;
                                                                   owl:someValuesFrom tnm-lung-olivier:TumorBetween2cm3cm
                                                                 ]
                                                               ) ;
@@ -1133,7 +1133,7 @@ tnm-lung-olivier:T1b rdf:type owl:Class ;
 tnm-lung-olivier:T2 rdf:type owl:Class ;
                     owl:equivalentClass [ owl:intersectionOf ( tnm-lung-olivier:LungCancerDiagnosis
                                                                [ rdf:type owl:Restriction ;
-                                                                 owl:onProperty tnm-lung-olivier:hasPrimaryTumour ;
+                                                                 owl:onProperty tnm-lung-olivier:hasPrimaryTumor ;
                                                                  owl:someValuesFrom [ rdf:type owl:Class ;
                                                                                       owl:unionOf ( tnm-lung-olivier:TumorBetween3cm5cm
                                                                                                     tnm-lung-olivier:TumorBetween5cm7cm
@@ -1150,7 +1150,7 @@ tnm-lung-olivier:T2 rdf:type owl:Class ;
 tnm-lung-olivier:T2a rdf:type owl:Class ;
                      owl:equivalentClass [ owl:intersectionOf ( tnm-lung-olivier:LungCancerDiagnosis
                                                                 [ rdf:type owl:Restriction ;
-                                                                  owl:onProperty tnm-lung-olivier:hasPrimaryTumour ;
+                                                                  owl:onProperty tnm-lung-olivier:hasPrimaryTumor ;
                                                                   owl:someValuesFrom tnm-lung-olivier:TumorBetween3cm5cm
                                                                 ]
                                                               ) ;
@@ -1163,7 +1163,7 @@ tnm-lung-olivier:T2a rdf:type owl:Class ;
 tnm-lung-olivier:T2b rdf:type owl:Class ;
                      owl:equivalentClass [ owl:intersectionOf ( tnm-lung-olivier:LungCancerDiagnosis
                                                                 [ rdf:type owl:Restriction ;
-                                                                  owl:onProperty tnm-lung-olivier:hasPrimaryTumour ;
+                                                                  owl:onProperty tnm-lung-olivier:hasPrimaryTumor ;
                                                                   owl:someValuesFrom tnm-lung-olivier:TumorBetween5cm7cm
                                                                 ]
                                                               ) ;
@@ -1176,7 +1176,7 @@ tnm-lung-olivier:T2b rdf:type owl:Class ;
 tnm-lung-olivier:T3 rdf:type owl:Class ;
                     owl:equivalentClass [ owl:intersectionOf ( tnm-lung-olivier:LungCancerDiagnosis
                                                                [ rdf:type owl:Restriction ;
-                                                                 owl:onProperty tnm-lung-olivier:hasPrimaryTumour ;
+                                                                 owl:onProperty tnm-lung-olivier:hasPrimaryTumor ;
                                                                  owl:someValuesFrom [ rdf:type owl:Class ;
                                                                                       owl:unionOf ( tnm-lung-olivier:TumorGreater7cm
                                                                                                     [ rdf:type owl:Restriction ;
@@ -1201,7 +1201,7 @@ tnm-lung-olivier:T3 rdf:type owl:Class ;
 tnm-lung-olivier:T4 rdf:type owl:Class ;
                     owl:equivalentClass [ owl:intersectionOf ( tnm-lung-olivier:LungCancerDiagnosis
                                                                [ rdf:type owl:Restriction ;
-                                                                 owl:onProperty tnm-lung-olivier:hasPrimaryTumour ;
+                                                                 owl:onProperty tnm-lung-olivier:hasPrimaryTumor ;
                                                                  owl:someValuesFrom [ rdf:type owl:Restriction ;
                                                                                       owl:onProperty tnm-lung-olivier:hasLocation ;
                                                                                       owl:someValuesFrom [ rdf:type owl:Class ;
@@ -1246,7 +1246,7 @@ tnm-lung-olivier:TumorGreater7cm rdf:type owl:Class ;
 
 ###  http://smi.stanford.edu/people/dameron/ontology/tnm-lung-olivier.owl#TumorSize
 tnm-lung-olivier:TumorSize rdf:type owl:Class ;
-                           rdfs:subClassOf tnm-lung-olivier:Tumour .
+                           rdfs:subClassOf tnm-lung-olivier:Tumor .
 
 
 ###  http://smi.stanford.edu/people/dameron/ontology/tnm-lung-olivier.owl#TumorSmaller2cm
@@ -1254,13 +1254,13 @@ tnm-lung-olivier:TumorSmaller2cm rdf:type owl:Class ;
                                  rdfs:subClassOf tnm-lung-olivier:TumorSize .
 
 
-###  http://smi.stanford.edu/people/dameron/ontology/tnm-lung-olivier.owl#Tumour
-tnm-lung-olivier:Tumour rdf:type owl:Class .
+###  http://smi.stanford.edu/people/dameron/ontology/tnm-lung-olivier.owl#Tumor
+tnm-lung-olivier:Tumor rdf:type owl:Class .
 
 
 ###  http://smi.stanford.edu/people/dameron/ontology/tnm-lung-olivier.owl#UpperLeftLobePrimaryTumor
 tnm-lung-olivier:UpperLeftLobePrimaryTumor rdf:type owl:Class ;
-                                           rdfs:subClassOf tnm-lung-olivier:PrimaryTumour ,
+                                           rdfs:subClassOf tnm-lung-olivier:PrimaryTumor ,
                                                            [ rdf:type owl:Restriction ;
                                                              owl:onProperty tnm-lung-olivier:hasLocation ;
                                                              owl:someValuesFrom tnm-lung-olivier:UpperLobeOfLeftLung
