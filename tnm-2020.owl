@@ -459,7 +459,8 @@ tnm-lung-olivier:Lung rdf:type owl:Class ;
 
 ###  http://smi.stanford.edu/people/dameron/ontology/tnm-lung-olivier.owl#LungCancerDiagnosis
 tnm-lung-olivier:LungCancerDiagnosis rdf:type owl:Class ;
-                                     owl:equivalentClass [ owl:intersectionOf ( tnm-lung-olivier:CancerDiagnosis
+                                     owl:equivalentClass tnm-lung-olivier:Patient ,
+                                                         [ owl:intersectionOf ( tnm-lung-olivier:CancerDiagnosis
                                                                                 [ rdf:type owl:Restriction ;
                                                                                   owl:onProperty tnm-lung-olivier:hasPrimaryTumour ;
                                                                                   owl:someValuesFrom [ rdf:type owl:Restriction ;
@@ -471,11 +472,6 @@ tnm-lung-olivier:LungCancerDiagnosis rdf:type owl:Class ;
                                                            rdf:type owl:Class
                                                          ] ;
                                      rdfs:subClassOf tnm-lung-olivier:CancerDiagnosis .
-
-
-###  http://smi.stanford.edu/people/dameron/ontology/tnm-lung-olivier.owl#LungCancerExamples
-tnm-lung-olivier:LungCancerExamples rdf:type owl:Class ;
-                                    rdfs:subClassOf tnm-lung-olivier:LungCancerDiagnosis .
 
 
 ###  http://smi.stanford.edu/people/dameron/ontology/tnm-lung-olivier.owl#LymphNode
@@ -626,9 +622,13 @@ tnm-lung-olivier:ParietalPericardium rdf:type owl:Class ;
                                      owl:disjointWith tnm-lung-olivier:Trachea .
 
 
+###  http://smi.stanford.edu/people/dameron/ontology/tnm-lung-olivier.owl#Patient
+tnm-lung-olivier:Patient rdf:type owl:Class .
+
+
 ###  http://smi.stanford.edu/people/dameron/ontology/tnm-lung-olivier.owl#Patient1
 tnm-lung-olivier:Patient1 rdf:type owl:Class ;
-                          rdfs:subClassOf tnm-lung-olivier:LungCancerExamples ,
+                          rdfs:subClassOf tnm-lung-olivier:Patient ,
                                           [ rdf:type owl:Restriction ;
                                             owl:onProperty tnm-lung-olivier:hasLocation ;
                                             owl:someValuesFrom tnm-lung-olivier:UpperLobeOfLeftLung
@@ -643,9 +643,26 @@ tnm-lung-olivier:Patient1 rdf:type owl:Class ;
                                           ] .
 
 
+###  http://smi.stanford.edu/people/dameron/ontology/tnm-lung-olivier.owl#Patient1b
+tnm-lung-olivier:Patient1b rdf:type owl:Class ;
+                           rdfs:subClassOf tnm-lung-olivier:Patient ,
+                                           [ rdf:type owl:Restriction ;
+                                             owl:onProperty tnm-lung-olivier:hasLocation ;
+                                             owl:someValuesFrom tnm-lung-olivier:UpperLobeOfLeftLung
+                                           ] ,
+                                           [ rdf:type owl:Restriction ;
+                                             owl:onProperty tnm-lung-olivier:hasPrimaryTumour ;
+                                             owl:someValuesFrom tnm-lung-olivier:TumorBetween3cm5cm
+                                           ] ,
+                                           [ rdf:type owl:Restriction ;
+                                             owl:onProperty tnm-lung-olivier:hasMetastasis ;
+                                             owl:cardinality "0"^^xsd:nonNegativeInteger
+                                           ] .
+
+
 ###  http://smi.stanford.edu/people/dameron/ontology/tnm-lung-olivier.owl#Patient2
 tnm-lung-olivier:Patient2 rdf:type owl:Class ;
-                          rdfs:subClassOf tnm-lung-olivier:LungCancerExamples ,
+                          rdfs:subClassOf tnm-lung-olivier:Patient ,
                                           [ rdf:type owl:Restriction ;
                                             owl:onProperty tnm-lung-olivier:hasMetastasis ;
                                             owl:someValuesFrom tnm-lung-olivier:RightHilarMetastasis
@@ -676,7 +693,7 @@ tnm-lung-olivier:Patient2 rdf:type owl:Class ;
 
 ###  http://smi.stanford.edu/people/dameron/ontology/tnm-lung-olivier.owl#Patient3
 tnm-lung-olivier:Patient3 rdf:type owl:Class ;
-                          rdfs:subClassOf tnm-lung-olivier:LungCancerExamples ,
+                          rdfs:subClassOf tnm-lung-olivier:Patient ,
                                           [ rdf:type owl:Restriction ;
                                             owl:onProperty tnm-lung-olivier:hasPrimaryTumour ;
                                             owl:someValuesFrom [ rdf:type owl:Restriction ;
@@ -692,7 +709,7 @@ tnm-lung-olivier:Patient3 rdf:type owl:Class ;
 
 ###  http://smi.stanford.edu/people/dameron/ontology/tnm-lung-olivier.owl#Patient4
 tnm-lung-olivier:Patient4 rdf:type owl:Class ;
-                          rdfs:subClassOf tnm-lung-olivier:LungCancerExamples ,
+                          rdfs:subClassOf tnm-lung-olivier:Patient ,
                                           [ rdf:type owl:Restriction ;
                                             owl:onProperty tnm-lung-olivier:hasPrimaryTumour ;
                                             owl:someValuesFrom [ rdf:type owl:Restriction ;
@@ -708,7 +725,7 @@ tnm-lung-olivier:Patient4 rdf:type owl:Class ;
 
 ###  http://smi.stanford.edu/people/dameron/ontology/tnm-lung-olivier.owl#Patient5
 tnm-lung-olivier:Patient5 rdf:type owl:Class ;
-                          rdfs:subClassOf tnm-lung-olivier:LungCancerExamples ,
+                          rdfs:subClassOf tnm-lung-olivier:Patient ,
                                           [ rdf:type owl:Restriction ;
                                             owl:onProperty tnm-lung-olivier:hasPrimaryTumour ;
                                             owl:someValuesFrom tnm-lung-olivier:TumorBetween5cm7cm
@@ -728,7 +745,7 @@ tnm-lung-olivier:Patient5 rdf:type owl:Class ;
 
 ###  http://smi.stanford.edu/people/dameron/ontology/tnm-lung-olivier.owl#Patient6
 tnm-lung-olivier:Patient6 rdf:type owl:Class ;
-                          rdfs:subClassOf tnm-lung-olivier:LungCancerExamples ,
+                          rdfs:subClassOf tnm-lung-olivier:Patient ,
                                           [ rdf:type owl:Restriction ;
                                             owl:onProperty tnm-lung-olivier:hasMetastasis ;
                                             owl:someValuesFrom tnm-lung-olivier:LeftMediastinalMetastasis
@@ -759,7 +776,7 @@ tnm-lung-olivier:Patient6 rdf:type owl:Class ;
 
 ###  http://smi.stanford.edu/people/dameron/ontology/tnm-lung-olivier.owl#Patient7
 tnm-lung-olivier:Patient7 rdf:type owl:Class ;
-                          rdfs:subClassOf tnm-lung-olivier:LungCancerExamples ,
+                          rdfs:subClassOf tnm-lung-olivier:Patient ,
                                           [ rdf:type owl:Restriction ;
                                             owl:onProperty tnm-lung-olivier:hasMetastasis ;
                                             owl:someValuesFrom tnm-lung-olivier:RightMediastinalMetastasis
@@ -786,7 +803,7 @@ tnm-lung-olivier:Patient7 rdf:type owl:Class ;
 
 ###  http://smi.stanford.edu/people/dameron/ontology/tnm-lung-olivier.owl#Patient8
 tnm-lung-olivier:Patient8 rdf:type owl:Class ;
-                          rdfs:subClassOf tnm-lung-olivier:LungCancerExamples ,
+                          rdfs:subClassOf tnm-lung-olivier:Patient ,
                                           [ rdf:type owl:Restriction ;
                                             owl:onProperty tnm-lung-olivier:hasMetastasis ;
                                             owl:someValuesFrom [ rdf:type owl:Restriction ;
@@ -798,7 +815,7 @@ tnm-lung-olivier:Patient8 rdf:type owl:Class ;
 
 ###  http://smi.stanford.edu/people/dameron/ontology/tnm-lung-olivier.owl#Patient9
 tnm-lung-olivier:Patient9 rdf:type owl:Class ;
-                          rdfs:subClassOf tnm-lung-olivier:LungCancerExamples ,
+                          rdfs:subClassOf tnm-lung-olivier:Patient ,
                                           [ rdf:type owl:Restriction ;
                                             owl:onProperty tnm-lung-olivier:hasMetastasis ;
                                             owl:someValuesFrom [ rdf:type owl:Restriction ;
@@ -810,6 +827,11 @@ tnm-lung-olivier:Patient9 rdf:type owl:Class ;
                                             owl:onProperty tnm-lung-olivier:hasPrimaryTumour ;
                                             owl:someValuesFrom tnm-lung-olivier:TumorBetween3cm5cm
                                           ] .
+
+
+###  http://smi.stanford.edu/people/dameron/ontology/tnm-lung-olivier.owl#PatientNull
+tnm-lung-olivier:PatientNull rdf:type owl:Class ;
+                             rdfs:subClassOf tnm-lung-olivier:Patient .
 
 
 ###  http://smi.stanford.edu/people/dameron/ontology/tnm-lung-olivier.owl#PeribronchialLymphNode
@@ -1281,6 +1303,56 @@ owl:Thing rdf:type owl:Class .
 #################################################################
 #    Individuals
 #################################################################
+
+###  http://smi.stanford.edu/people/dameron/ontology/tnm-lung-olivier.owl#Patient1Instance
+tnm-lung-olivier:Patient1Instance rdf:type owl:NamedIndividual ,
+                                           tnm-lung-olivier:Patient1 .
+
+
+###  http://smi.stanford.edu/people/dameron/ontology/tnm-lung-olivier.owl#Patient2Instance
+tnm-lung-olivier:Patient2Instance rdf:type owl:NamedIndividual ,
+                                           tnm-lung-olivier:Patient2 .
+
+
+###  http://smi.stanford.edu/people/dameron/ontology/tnm-lung-olivier.owl#Patient3Instance
+tnm-lung-olivier:Patient3Instance rdf:type owl:NamedIndividual ,
+                                           tnm-lung-olivier:Patient3 .
+
+
+###  http://smi.stanford.edu/people/dameron/ontology/tnm-lung-olivier.owl#Patient4Instance
+tnm-lung-olivier:Patient4Instance rdf:type owl:NamedIndividual ,
+                                           tnm-lung-olivier:Patient4 .
+
+
+###  http://smi.stanford.edu/people/dameron/ontology/tnm-lung-olivier.owl#Patient5Instance
+tnm-lung-olivier:Patient5Instance rdf:type owl:NamedIndividual ,
+                                           tnm-lung-olivier:Patient5 .
+
+
+###  http://smi.stanford.edu/people/dameron/ontology/tnm-lung-olivier.owl#Patient6Instance
+tnm-lung-olivier:Patient6Instance rdf:type owl:NamedIndividual ,
+                                           tnm-lung-olivier:Patient6 .
+
+
+###  http://smi.stanford.edu/people/dameron/ontology/tnm-lung-olivier.owl#Patient7Instance
+tnm-lung-olivier:Patient7Instance rdf:type owl:NamedIndividual ,
+                                           tnm-lung-olivier:Patient7 .
+
+
+###  http://smi.stanford.edu/people/dameron/ontology/tnm-lung-olivier.owl#Patient8Instance
+tnm-lung-olivier:Patient8Instance rdf:type owl:NamedIndividual ,
+                                           tnm-lung-olivier:Patient8 .
+
+
+###  http://smi.stanford.edu/people/dameron/ontology/tnm-lung-olivier.owl#Patient9Instance
+tnm-lung-olivier:Patient9Instance rdf:type owl:NamedIndividual ,
+                                           tnm-lung-olivier:Patient9 .
+
+
+###  http://smi.stanford.edu/people/dameron/ontology/tnm-lung-olivier.owl#PatientNullInstance
+tnm-lung-olivier:PatientNullInstance rdf:type owl:NamedIndividual ,
+                                              tnm-lung-olivier:PatientNull .
+
 
 ###  http://smi.stanford.edu/people/dameron/ontology/tnm-lung-olivier.owl#left
 tnm-lung-olivier:left rdf:type owl:NamedIndividual ,
