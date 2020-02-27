@@ -1153,6 +1153,14 @@ tnm-lung-olivier:T1a rdf:type owl:Class ;
 
 ###  http://smi.stanford.edu/people/dameron/ontology/tnm-lung-olivier.owl#T1b
 tnm-lung-olivier:T1b rdf:type owl:Class ;
+                     owl:equivalentClass [ owl:intersectionOf ( tnm-lung-olivier:LungCancerDiagnosis
+                                                                [ rdf:type owl:Restriction ;
+                                                                  owl:onProperty tnm-lung-olivier:hasPrimaryTumor ;
+                                                                  owl:someValuesFrom tnm-lung-olivier:TumorBetween2cm3cm
+                                                                ]
+                                                              ) ;
+                                           rdf:type owl:Class
+                                         ] ;
                      rdfs:subClassOf tnm-lung-olivier:T1 .
 
 
@@ -1366,6 +1374,11 @@ owl:Thing rdf:type owl:Class .
 ###  http://smi.stanford.edu/people/dameron/ontology/tnm-lung-olivier.owl#Patient1Instance
 tnm-lung-olivier:Patient1Instance rdf:type owl:NamedIndividual ,
                                            tnm-lung-olivier:Patient1 .
+
+
+###  http://smi.stanford.edu/people/dameron/ontology/tnm-lung-olivier.owl#Patient1bInstance
+tnm-lung-olivier:Patient1bInstance rdf:type owl:NamedIndividual ,
+                                            tnm-lung-olivier:Patient1b .
 
 
 ###  http://smi.stanford.edu/people/dameron/ontology/tnm-lung-olivier.owl#Patient2Instance
