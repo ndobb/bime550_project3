@@ -1,8 +1,7 @@
-Table S2. Clinical information of NSCLC patients from TCIA database,,,,,,,,,,,
 sample.name,title,source.location,organism,characteristics.tag.gender,characteristics.tag.histology,characteristics.tag.tumor.size.maximumdiameter,characteristics.tag.stage.primary.tumor,characteristics.tag.stage.nodes,characteristics.tag.stage.mets,characteristics.tag.primaryVSmets,characteristics.tag.grade
 LUNG3-01,lung_1,Left  Lower Lobe,Homo sapiens,M,"Squamous Cell Carcinoma, NOS",4,pT2,pN0,pM0,Primary,3
 LUNG3-03,lung_3,Left  Lower Lobe,Homo sapiens,M,Non-Small Cell,11,pT3,pN0,pM0,Primary,3
-LUNG3-04,lung_4,Left  Lower Lobe,Homo sapiens,M,"Papillary Type AND      Adenocarcinoma, Bronchiolo-alveolar Features",,pTX,pNx,pM1,Primary,Not Available
+LUNG3-04,lung_4,Left  Lower Lobe,Homo sapiens,M,"Papillary Type AND ï¿½ï¿½ï¿½ï¿½ Adenocarcinoma, Bronchiolo-alveolar Features",,pTX,pNx,pM1,Primary,Not Available
 LUNG3-05,lung_5,Left  Lower Lobe,Homo sapiens,F,"Squamous Cell Carcinoma, NOS",7.8,pT3,pN0,pM0,Primary,2
 LUNG3-06,lung_6,Right    Lower Lobe,Homo sapiens,M,"Adenocarcinoma, NOS",3.5,pT2,pN0,pM0,Primary,2
 LUNG3-07,lung_7,Right    Lower Lobe,Homo sapiens,M,"Squamous Cell Carcinoma, NOS",11,pT3,pN2,pM0,Primary,3
