@@ -1309,13 +1309,10 @@ tnm-lung-olivier:SupraclavicularLymphNode rdf:type owl:Class ;
 ###  http://smi.stanford.edu/people/dameron/ontology/tnm-lung-olivier.owl#T1
 tnm-lung-olivier:T1 rdf:type owl:Class ;
                     owl:equivalentClass [ owl:intersectionOf ( tnm-lung-olivier:LungCancerDiagnosis
-                                                               [ rdf:type owl:Restriction ;
-                                                                 owl:onProperty tnm-lung-olivier:hasPrimaryTumor ;
-                                                                 owl:someValuesFrom [ rdf:type owl:Class ;
-                                                                                      owl:unionOf ( tnm-lung-olivier:TumorBetween2cm3cm
-                                                                                                    tnm-lung-olivier:TumorSmaller2cm
-                                                                                                  )
-                                                                                    ]
+                                                               [ rdf:type owl:Class ;
+                                                                 owl:unionOf ( tnm-lung-olivier:T1a
+                                                                               tnm-lung-olivier:T1b
+                                                                             )
                                                                ]
                                                              ) ;
                                           rdf:type owl:Class
@@ -1352,13 +1349,10 @@ tnm-lung-olivier:T1b rdf:type owl:Class ;
 ###  http://smi.stanford.edu/people/dameron/ontology/tnm-lung-olivier.owl#T2
 tnm-lung-olivier:T2 rdf:type owl:Class ;
                     owl:equivalentClass [ owl:intersectionOf ( tnm-lung-olivier:LungCancerDiagnosis
-                                                               [ rdf:type owl:Restriction ;
-                                                                 owl:onProperty tnm-lung-olivier:hasPrimaryTumor ;
-                                                                 owl:someValuesFrom [ rdf:type owl:Class ;
-                                                                                      owl:unionOf ( tnm-lung-olivier:TumorBetween3cm5cm
-                                                                                                    tnm-lung-olivier:TumorBetween5cm7cm
-                                                                                                  )
-                                                                                    ]
+                                                               [ rdf:type owl:Class ;
+                                                                 owl:unionOf ( tnm-lung-olivier:T2a
+                                                                               tnm-lung-olivier:T2b
+                                                                             )
                                                                ]
                                                              ) ;
                                           rdf:type owl:Class
